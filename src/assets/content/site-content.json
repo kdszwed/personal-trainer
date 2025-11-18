@@ -1,0 +1,32 @@
+{
+  "slogans": [
+    "Silne ciało. Silna głowa.",
+    "Trenuj mądrze, nie tylko ciężko.",
+    "Twoja najlepsza forma zaczyna się dzisiaj."
+  ],
+  "aboutText": "Jestem certyfikowanym trenerem personalnym. Pomagam budować siłę, sprawność i zdrowe nawyki na lata.",
+  "achievements": [
+    { "value": "150+", "label": "Zadowolonych podopiecznych" },
+    { "value": "5+", "label": "Lat doświadczenia" },
+    { "value": "3000+", "label": "Przeprowadzonych treningów" }
+  ],
+  "transformations": [
+    {
+      "name": "Anna – 12 kg mniej w 6 miesięcy",
+      "description": "Zdrowa redukcja, poprawiona sylwetka i więcej energii.",
+      "beforeImageUrl": "assets/gallery/anna-before.jpg",
+      "afterImageUrl": "assets/gallery/anna-after.jpg"
+    },
+    {
+      "name": "Marek – +6 kg masy mięśniowej",
+      "description": "Program ukierunkowany na siłę i hipertrofię.",
+      "beforeImageUrl": "assets/gallery/marek-before.jpg",
+      "afterImageUrl": "assets/gallery/marek-after.jpg"
+    }
+  ],
+  "galleryItems": [
+    { "title": "Trening plenerowy", "imageUrl": "assets/gallery/outdoor-training.jpg" },
+    { "title": "Sesja na siłowni", "imageUrl": "assets/gallery/gym-session.jpg" },
+    { "title": "Mobilność i stretching", "imageUrl": "assets/gallery/stretching.jpg" }
+  ]
+}
