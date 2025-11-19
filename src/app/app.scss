@@ -1,0 +1,58 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 24px;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+}
+
+.toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.toolbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-main {
+  min-height: 100vh;
+}
+
+/* RWD */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-wrap: wrap;
+    padding-inline: 12px;
+  }
+
+  .toolbar__nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+}
