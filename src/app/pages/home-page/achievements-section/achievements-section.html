@@ -1,23 +1,53 @@
 <section id="achievements" class="section section--achievements">
-  <div class="section__header">
-    <h2>{{ achievementsSection().heading }}</h2>
-    <p>{{ achievementsSection().subtitle }}</p>
+
+  <!-- TŁO PARALLAX -->
+  <div class="achievements__bg-parallax">
+    <img
+      src="assets/images/achievements2.webp"
+      alt="Tło pucharu przesuwające się przy scrollowaniu"
+    />
   </div>
 
-  <p class="section__description">
-    {{ achievementsSection().description }}
-  </p>
+  <div class="achievements__content">
 
-  <div class="achievements">
-    @for (achievement of achievements(); track achievement.label) {
-      <mat-card class="achievements__card">
-        <div class="achievements__value">
-          {{ achievement.value }}
-        </div>
-        <div class="achievements__label">
-          {{ achievement.label }}
-        </div>
-      </mat-card>
-    }
+    <!-- Nagłówek sekcji -->
+    <div class="section__header">
+      <h2>{{ achievementsSection().heading }}</h2>
+      <p>{{ achievementsSection().subtitle }}</p>
+    </div>
+
+    <!-- Opis -->
+    <p class="section__description">
+      {{ achievementsSection().description }}
+    </p>
+
+
+    <div class="achievements__side-image">
+      <img
+        src="assets/images/achievements1.webp"
+        alt="Osiągnięcia trener personalny"
+      />
+    </div>
+
+    <!-- GRID z kartami osiągnięć -->
+    <div class="achievements__grid">
+
+      @for (item of achievements(); let i = $index; track item.label) {
+        <mat-card class="achievements__card">
+
+          <div class="achievements__value">
+            {{ animatedValues()[i] }}<span class="achievements__suffix">{{ suffixes[i] }}</span>
+          </div>
+
+
+          <div class="achievements__label">
+            {{ item.label }}
+          </div>
+
+        </mat-card>
+      }
+
+    </div>
+
   </div>
 </section>
