@@ -1,0 +1,52 @@
+.transformations {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.transformations__card {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.transformations__images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.transformations__image-wrapper {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  figcaption {
+    margin-top: 4px;
+    font-size: 13px;
+    opacity: 0.8;
+  }
+}
+
+.transformations__info {
+  margin-top: 12px;
+
+  h3 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .transformations__images {
+    flex-direction: column;
+  }
+}

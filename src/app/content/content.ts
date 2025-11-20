@@ -6,7 +6,7 @@ export interface Achievement {
   value: string;
 }
 
-export interface TransformationItem {
+export interface Transformation {
   name: string;
   description: string;
   beforeImageUrl: string;
@@ -18,35 +18,126 @@ export interface GalleryItem {
   imageUrl: string;
 }
 
-export interface SiteContent {
-  slogans: string[];
-  aboutText: string;
-  achievements: Achievement[];
-  transformations: TransformationItem[];
-  galleryItems: GalleryItem[];
+export interface ContactOption {
+  value: string;
+  label: string;
 }
+
+export interface SiteContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    title: string;
+    subtitle: string;
+    primaryCtaLabel: string;
+    secondaryCtaLabel: string;
+  };
+  about: {
+    heading: string;
+    intro: string;
+    paragraphs: string[];
+  };
+  slogans: string[];
+  achievementsSection: {
+    heading: string;
+    subtitle: string;
+    description: string;
+  };
+  achievements: Achievement[];
+  transformationsSection: {
+    heading: string;
+    subtitle: string;
+    description: string;
+  };
+  transformations: Transformation[];
+  gallerySection: {
+    heading: string;
+    subtitle: string;
+  };
+  galleryItems: GalleryItem[];
+  bookSection: {
+    heading: string;
+    text: string;
+    buttonLabel: string;
+  };
+  contactSection: {
+    heading: string;
+    subtitle: string;
+    description: string;
+    successMessage: string;
+    fields: {
+      type: {
+        label: string;
+        error: string;
+        options: ContactOption[];
+      };
+      name: {
+        label: string;
+        placeholder: string;
+        error: string;
+      };
+      email: {
+        label: string;
+        placeholder: string;
+        error: string;
+      };
+      message: {
+        label: string;
+        placeholder: string;
+        error: string;
+      };
+      submit: {
+        label: string;
+        sendingLabel: string;
+      };
+    };
+  };
+}
+
+const content = siteContent as SiteContent;
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
-  private readonly contentSignal = signal<SiteContent>(siteContent as SiteContent);
+  private readonly _content = signal<SiteContent>(content);
 
-  slogans = signal<string[]>(this.contentSignal().slogans);
-  aboutText = signal<string>(this.contentSignal().aboutText);
-  achievements = signal<Achievement[]>(this.contentSignal().achievements);
-  transformations = signal<TransformationItem[]>(this.contentSignal().transformations);
-  galleryItems = signal<GalleryItem[]>(this.contentSignal().galleryItems);
+  // Meta
+  metaTitle = signal(this._content().meta.title);
+  metaDescription = signal(this._content().meta.description);
 
-  updateSlogans(slogans: string[]) {
-    this.slogans.set(slogans);
-  }
+  // Hero
+  heroTitle = signal(this._content().hero.title);
+  heroSubtitle = signal(this._content().hero.subtitle);
+  heroPrimaryCtaLabel = signal(this._content().hero.primaryCtaLabel);
+  heroSecondaryCtaLabel = signal(this._content().hero.secondaryCtaLabel);
 
-  updateAbout(text: string) {
-    this.aboutText.set(text);
-  }
+  // About
+  aboutHeading = signal(this._content().about.heading);
+  aboutIntro = signal(this._content().about.intro);
+  aboutParagraphs = signal(this._content().about.paragraphs);
 
-  updateAchievements(items: Achievement[]) {
-    this.achievements.set(items);
-  }
+  // Slogans
+  slogans = signal(this._content().slogans);
+
+  // Achievements
+  achievementsSection = signal(this._content().achievementsSection);
+  achievements = signal(this._content().achievements);
+
+  // Transformations
+  transformationsSection = signal(this._content().transformationsSection);
+  transformations = signal(this._content().transformations);
+
+  // Gallery
+  gallerySection = signal(this._content().gallerySection);
+  galleryItems = signal(this._content().galleryItems);
+
+  // Book (Umów trening)
+  bookSection = signal(this._content().bookSection);
+
+  // Contact
+  contactSection = signal(this._content().contactSection);
+
 }

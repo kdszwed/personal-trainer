@@ -1,63 +1,31 @@
-.app-header {
+.toolbar {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 24px;
-  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
-  color: #ffffff;
 }
 
-.toolbar__left {
+.toolbar__content {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-.logo-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-.logo-text {
-  font-size: 20px;
-  font-weight: 700;
+.toolbar__logo {
+  height: 40px;
 }
 
 .toolbar__nav {
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 
-.app-main {
-  padding-top: 72px;
-  min-height: 100vh;
-}
-
-/* RWD */
-@media (max-width: 768px) {
-  .toolbar {
-    flex-wrap: wrap;
-    padding-inline: 12px;
-  }
-
-  .toolbar__nav {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
-  .logo-text {
-    font-size: 16px;
-  }
+button[mat-button] {
+  color: white;
 }

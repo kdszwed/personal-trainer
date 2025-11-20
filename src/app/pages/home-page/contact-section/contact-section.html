@@ -1,0 +1,91 @@
+<section id="contact" class="section section--contact">
+  <div class="section__header">
+    <h2>{{ contactSection().heading }}</h2>
+    <p>{{ contactSection().subtitle }}</p>
+  </div>
+
+  <p class="section__description">
+    {{ contactSection().description }}
+  </p>
+
+  <div class="contact">
+    <mat-card class="contact__card">
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="submitContactForm()"
+        class="contact__form"
+        novalidate
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>{{ contactSection().fields.type.label }}</mat-label>
+          <mat-select formControlName="type">
+            @for (option of contactSection().fields.type.options; track option.value) {
+              <mat-option [value]="option.value">{{ option.label }}</mat-option>
+            }
+          </mat-select>
+          @if (contactForm.controls.type.invalid && contactForm.controls.type.touched) {
+            <mat-error>{{ contactSection().fields.type.error }}</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>{{ contactSection().fields.name.label }}</mat-label>
+          <input
+            matInput
+            formControlName="name"
+            [placeholder]="contactSection().fields.name.placeholder"
+          />
+          @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
+            <mat-error>{{ contactSection().fields.name.error }}</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>{{ contactSection().fields.email.label }}</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            [placeholder]="contactSection().fields.email.placeholder"
+          />
+          @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
+            <mat-error>{{ contactSection().fields.email.error }}</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>{{ contactSection().fields.message.label }}</mat-label>
+          <textarea
+            matInput
+            formControlName="message"
+            rows="5"
+            [placeholder]="contactSection().fields.message.placeholder"
+          ></textarea>
+          @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
+            <mat-error>{{ contactSection().fields.message.error }}</mat-error>
+          }
+        </mat-form-field>
+
+        <div class="contact__actions">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="isSending"
+          >
+            @if (isSending) {
+              {{ contactSection().fields.submit.sendingLabel }}
+            } @else {
+              {{ contactSection().fields.submit.label }}
+            }
+          </button>
+        </div>
+
+        @if (formSubmitted) {
+          <p class="contact__success">
+            {{ contactSection().successMessage }}
+          </p>
+        }
+      </form>
+    </mat-card>
+  </div>
+</section>

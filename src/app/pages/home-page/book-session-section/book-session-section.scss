@@ -1,0 +1,21 @@
+.section--book {
+  text-align: center;
+}
+
+.book {
+  display: flex;
+  justify-content: center;
+}
+
+.book__content {
+  max-width: 640px;
+
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+}

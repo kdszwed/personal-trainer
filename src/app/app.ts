@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 
 interface NavItem {
   label: string;
@@ -12,7 +11,11 @@ interface NavItem {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [
+    RouterOutlet,
+    MatToolbarModule,
+    MatButtonModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -26,19 +29,7 @@ export class App {
     { label: 'Kontakt', fragment: 'contact' }
   ];
 
-  constructor(private router: Router) {}
-
   scrollTo(fragment: string) {
-    if (this.router.url !== '/') {
-      this.router.navigate(['/']).then(() => {
-        setTimeout(() => this.performScroll(fragment), 100);
-      });
-    } else {
-      this.performScroll(fragment);
-    }
-  }
-
-  private performScroll(fragment: string) {
     const el = document.getElementById(fragment);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });

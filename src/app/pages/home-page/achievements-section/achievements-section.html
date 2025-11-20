@@ -1,0 +1,23 @@
+<section id="achievements" class="section section--achievements">
+  <div class="section__header">
+    <h2>{{ achievementsSection().heading }}</h2>
+    <p>{{ achievementsSection().subtitle }}</p>
+  </div>
+
+  <p class="section__description">
+    {{ achievementsSection().description }}
+  </p>
+
+  <div class="achievements">
+    @for (achievement of achievements(); track achievement.label) {
+      <mat-card class="achievements__card">
+        <div class="achievements__value">
+          {{ achievement.value }}
+        </div>
+        <div class="achievements__label">
+          {{ achievement.label }}
+        </div>
+      </mat-card>
+    }
+  </div>
+</section>

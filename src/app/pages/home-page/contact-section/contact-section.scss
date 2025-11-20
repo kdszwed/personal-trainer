@@ -1,0 +1,31 @@
+.section--contact {
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__card {
+  width: 100%;
+  max-width: 640px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact__success {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.95;
+}

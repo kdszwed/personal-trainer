@@ -1,13 +1,6 @@
-<header class="app-header">
-  <mat-toolbar class="toolbar" role="navigation" aria-label="Główna nawigacja">
-    <div class="toolbar__left">
-      <img
-        src="assets/logo/logo.svg"
-        alt="Logo trener osobisty"
-        class="logo-icon"
-      />
-      <span class="logo-text">Trener personalny</span>
-    </div>
+<mat-toolbar class="toolbar" color="primary">
+  <div class="toolbar__content">
+    <img src="assets/logo/logo.svg" alt="Logo" class="toolbar__logo" />
 
     <nav class="toolbar__nav">
       @for (item of navItems; track item.fragment) {
@@ -19,9 +12,7 @@
         </button>
       }
     </nav>
-  </mat-toolbar>
-</header>
+  </div>
+</mat-toolbar>
 
-<main class="app-main">
-  <router-outlet></router-outlet>
-</main>
+<router-outlet></router-outlet>
