@@ -57,14 +57,14 @@
     {
       "name": "Anna – powrót do formy po ciąży",
       "description": "Praca nad stabilizacją, siłą całego ciała i powrotem do sylwetki sprzed ciąży. Mniejszy ból pleców, więcej energii na co dzień.",
-      "beforeImageUrl": "assets/gallery/anna-before.jpg",
-      "afterImageUrl": "assets/gallery/anna-after.jpg"
+      "beforeImageUrl": "assets/images/anna-before.webp",
+      "afterImageUrl": "assets/images/anna-after.webp"
     },
     {
       "name": "Marek – redukcja i poprawa kondycji",
       "description": "Połączenie treningu siłowego i interwałów. Mniej kilogramów, lepsza wydolność i satysfakcja z regularnego ruchu.",
-      "beforeImageUrl": "assets/gallery/marek-before.jpg",
-      "afterImageUrl": "assets/gallery/marek-after.jpg"
+      "beforeImageUrl": "assets/images/marek-before.webp",
+      "afterImageUrl": "assets/images/marek-after.webp"
     }
   ],
   "gallerySection": {
