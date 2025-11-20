@@ -1,0 +1,54 @@
+<section id="about" class="section section--about">
+  <div class="about">
+    <div class="about__text">
+      <h1>{{ heroTitle() }}</h1>
+      <p class="about__subtitle">
+        {{ heroSubtitle() }}
+      </p>
+
+      <div class="about__slogans">
+        @for (slogan of slogans(); track slogan) {
+          <mat-card class="about__slogan-card">
+            <p>{{ slogan }}</p>
+          </mat-card>
+        }
+      </div>
+
+      <div class="about__description">
+        <h2>{{ aboutHeading() }}</h2>
+        <p class="about__intro">
+          {{ aboutIntro() }}
+        </p>
+
+        @for (paragraph of aboutParagraphs(); track paragraph) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+
+      <div class="about__cta">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="scrollTo('book-session')"
+        >
+          {{ heroPrimaryCtaLabel() }}
+        </button>
+
+        <button
+          mat-stroked-button
+          color="accent"
+          (click)="scrollTo('contact')"
+        >
+          {{ heroSecondaryCtaLabel() }}
+        </button>
+      </div>
+    </div>
+
+    <div class="about__image">
+      <img
+        src="assets/gallery/trainer-portrait.jpg"
+        alt="Trener personalny"
+      />
+    </div>
+  </div>
+</section>

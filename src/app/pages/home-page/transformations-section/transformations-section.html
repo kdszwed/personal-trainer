@@ -1,0 +1,33 @@
+<section id="transformations" class="section section--transformations">
+  <div class="section__header">
+    <h2>{{ transformationsSection().heading }}</h2>
+    <p>{{ transformationsSection().subtitle }}</p>
+  </div>
+
+  <p class="section__description">
+    {{ transformationsSection().description }}
+  </p>
+
+  <div class="transformations">
+    @for (item of transformations(); track item.name) {
+      <mat-card class="transformations__card">
+        <div class="transformations__images">
+          <figure class="transformations__image-wrapper">
+            <img [src]="item.beforeImageUrl" [alt]="'Przed - ' + item.name" />
+            <figcaption>Przed</figcaption>
+          </figure>
+
+          <figure class="transformations__image-wrapper transformations__image-wrapper--after">
+            <img [src]="item.afterImageUrl" [alt]="'Po - ' + item.name" />
+            <figcaption>Po</figcaption>
+          </figure>
+        </div>
+
+        <div class="transformations__info">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </mat-card>
+    }
+  </div>
+</section>
