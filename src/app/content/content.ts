@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import siteContent from '../../assets/content/site-content.json';
+import siteContent from './site-content.json';
 
 export interface Achievement {
   label: string;
