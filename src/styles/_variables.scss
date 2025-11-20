@@ -1,0 +1,21 @@
+// src/styles/_variables.scss
+
+// Colors
+$color-bg: #000000;
+$color-surface: rgba(255, 255, 255, 0.04);
+$color-text: #ffffff;
+$color-text-muted: rgba(255, 255, 255, 0.75);
+
+// Layout
+$max-width-page: 1200px;
+$spacing-section-y: 80px;
+$spacing-section-y-mobile: 60px;
+$spacing-page-x: 24px;
+$spacing-page-x-mobile: 16px;
+
+// Radii
+$radius-card: 16px;
+$radius-image: 16px;
+
+// Shadows
+$shadow-image: 0 16px 40px rgba(0, 0, 0, 0.6);
