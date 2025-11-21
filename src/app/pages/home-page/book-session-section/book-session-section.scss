@@ -3,8 +3,8 @@
 
 .section--book {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .book {
@@ -60,7 +60,15 @@
     flex-direction: column;
   }
 
+  .book__image {
+    width: 100%;
+    min-height: 260px;
+    background-position: center;
+  }
+
   .book__content {
     text-align: center;
+    width: 100%;
   }
 }
+
