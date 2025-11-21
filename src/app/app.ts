@@ -1,12 +1,47 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+
+interface NavItem {
+  label: string;
+  fragment: string;
+}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, MatToolbarModule, MatButtonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'personal-trainer';
+  navItems: NavItem[] = [
+    { label: 'O mnie', fragment: 'about' },
+    { label: 'Osiągnięcia', fragment: 'achievements' },
+    { label: 'Przemiany', fragment: 'transformations' },
+    { label: 'Galeria', fragment: 'gallery' },
+    { label: 'Umów trening', fragment: 'book-session' },
+    { label: 'Kontakt', fragment: 'contact' }
+  ];
+
+  constructor(private router: Router) {}
+
+  scrollTo(fragment: string) {
+    void this.router.navigate([], {
+      fragment,
+      replaceUrl: false,
+      queryParamsHandling: 'preserve'
+    });
+  }
+
+
+  scrollTop() {
+    if (typeof window === 'undefined') return;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    void this.router.navigate([], {
+      replaceUrl: true
+    });
+  }
 }

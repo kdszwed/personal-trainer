@@ -1,0 +1,162 @@
+@use 'styles/variables' as *;
+
+/* SHELL */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell__main {
+  flex: 1 0 auto;
+}
+
+/* HEADER */
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.toolbar.mat-toolbar-single-row {
+  height: auto;
+  min-height: 100px;
+}
+
+.toolbar__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.toolbar__logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  object-fit: contain;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+.toolbar__nav {
+  display: flex;
+  gap: 6px;
+}
+
+
+@media (max-width: 768px) {
+  .toolbar.mat-toolbar-single-row {
+    min-height: 130px;
+  }
+
+  .toolbar__content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .toolbar__logo {
+    display: none;
+  }
+
+  .toolbar__nav {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .toolbar__nav button {
+    font-size: 13px;
+    padding-inline: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar.mat-toolbar-single-row {
+    min-height: 100px;
+  }
+
+  .toolbar__nav button {
+    font-size: 12px;
+  }
+
+}
+
+/* FOOTER – zostaw to, co już masz niżej w pliku */
+
+
+
+.footer {
+  flex-shrink: 0;
+  background: url('/assets/images/footer.webp') center/cover no-repeat;
+  background-position-y: 70%;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.footer__overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.footer__center {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer__center a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__right {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 6px;
+  object-fit: contain;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .footer__inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

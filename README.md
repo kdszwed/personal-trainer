@@ -1,59 +1,46 @@
-# PersonalTrainer
+# Personal Trainer – One Page Angular Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+W pełni responsywna strona typu **One Page** dla trenera personalnego.  
+Projekt zrealizowany w **Angular 20**, z wykorzystaniem **Angular Material**, **standalone components**, **SSR**, oraz pełnym refaktorem **SCSS** z podziałem na sekcje.
 
-## Development server
+---
 
-To start a local development server, run:
+## ✨ Funkcje
 
-```bash
-ng serve
-```
+- Strona typu *One Page* z sekcjami:
+  - **O mnie**
+  - **Osiągnięcia**
+  - **Przemiany**
+  - **Galeria**
+  - **Umów trening**
+  - **Kontakt**
+- Sticky header z płynnym przewijaniem
+- Pełna responsywność (**420px – 1920px**)
+- SSR (**Server-Side Rendering**) dla lepszego SEO
+- Optymalizacja pod SEO
+- Treści ładowane z pliku JSON (ContentService + signals)
+- Animacje wejścia sekcji (IntersectionObserver + CSS)
+- Lazy loading i optymalizacja obrazów (WEBP)
+- SCSS z własnymi zmiennymi, mixinami oraz layoutem
+- Footer z danymi kontaktowymi i pełnym tłem graficznym
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠 Technologie
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Angular 20** (standalone + SSR)
+- **Angular Material (M3)**
+- **SCSS** (custom variables, mixins, shared layout)
+- **TypeScript**
+- **Signals + computed()**
+- **Responsive Web Design**
+- **JSON-based content**
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## 🚀 Instalacja
 
 ```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone https://github.com/kdszwed/personal-trainer.git
+cd personal-trainer
+npm install

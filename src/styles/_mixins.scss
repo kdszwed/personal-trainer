@@ -1,0 +1,36 @@
+@use 'styles/variables' as *;
+
+@mixin page-section {
+  padding: $spacing-section-y $spacing-page-x;
+  max-width: $max-width-page;
+  margin: 0 auto;
+
+  @media (max-width: 600px) {
+    padding: $spacing-section-y-mobile $spacing-page-x-mobile;
+  }
+}
+
+@mixin flex-center-row($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+@mixin flex-space-between($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+@mixin card-surface {
+  background: $color-surface;
+  border-radius: $radius-card;
+}

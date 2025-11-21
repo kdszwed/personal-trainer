@@ -1,0 +1,18 @@
+<section id="book-session" class="section section--book">
+  <div class="book">
+    <div class="book__image"></div>
+
+    <div class="book__content">
+      <h2>{{ bookSection().heading }}</h2>
+      <p>{{ bookSection().text }}</p>
+
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="scrollToContact()"
+      >
+        {{ bookSection().buttonLabel }}
+      </button>
+    </div>
+  </div>
+</section>
