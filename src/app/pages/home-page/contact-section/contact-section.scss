@@ -1,16 +1,44 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins';
+
 .section--contact {
-  text-align: center;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .contact {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 24px;
   display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 60px);
+}
+
+.contact__image {
+  flex: 1;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+.contact__image img {
+  width: clamp(220px, 26vw, 360px);
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
 .contact__card {
-  width: 100%;
-  max-width: 640px;
-  background: rgba(255, 255, 255, 0.04);
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 34px);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
 }
 
 .contact__form {
@@ -20,12 +48,31 @@
 }
 
 .contact__actions {
+  margin-top: 12px;
   display: flex;
   justify-content: flex-end;
 }
 
 .contact__success {
   margin-top: 12px;
-  font-size: 14px;
-  opacity: 0.95;
+  font-size: 0.95rem;
+  color: var(--mat-sys-primary);
+}
+
+@media (max-width: 900px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact__card {
+    order: 2;
+  }
+
+  .contact__image {
+    order: 1;
+  }
+
+  .contact__actions {
+    justify-content: center;
+  }
 }

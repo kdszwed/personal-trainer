@@ -1,19 +1,24 @@
 <section id="gallery" class="section section--gallery">
-  <div class="section__header">
-    <h2>{{ gallerySection().heading }}</h2>
-    <p>{{ gallerySection().subtitle }}</p>
-  </div>
+    <div class="section__header">
+        <h2>{{ gallerySection().heading }}</h2>
+        <p>{{ gallerySection().subtitle }}</p>
+    </div>
 
-  <div class="gallery">
-    @for (item of galleryItems(); track item.imageUrl) {
-      <mat-card class="gallery__card">
-        <div class="gallery__image-wrapper">
-          <img [src]="item.imageUrl" [alt]="item.title" />
-        </div>
-        <div class="gallery__title">
-          {{ item.title }}
-        </div>
-      </mat-card>
-    }
-  </div>
+    <div class="gallery">
+        @for (item of galleryItems(); track item.imageUrl) {
+            <mat-card class="gallery__card">
+                <div class="gallery__image-wrapper">
+                    <img
+                            [src]="item.imageUrl"
+                            [alt]="item.title"
+                            loading="lazy"
+                            decoding="async"
+                    />
+                </div>
+                <div class="gallery__title">
+                    {{ item.title }}
+                </div>
+            </mat-card>
+        }
+    </div>
 </section>

@@ -40,6 +40,7 @@ export interface SiteContent {
     paragraphs: string[];
   };
   slogans: string[];
+  highlightSlogan: string;
   achievementsSection: {
     heading: string;
     subtitle: string;
@@ -121,6 +122,9 @@ export class ContentService {
 
   // Slogans
   slogans = signal(this._content().slogans);
+
+  highlightSlogan = signal(this._content().highlightSlogan);
+
 
   // Achievements
   achievementsSection = signal(this._content().achievementsSection);

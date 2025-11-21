@@ -26,7 +26,8 @@
     "Zmieniam nawyki, nie tylko sylwetki.",
     "Wejdź poziom wyżej z profesjonalnym wsparciem.",
     "Trenuj skutecznie. Żyj intensywniej.",
-    "Metody bez zgadywania. Wyniki bez kompromisów."
+    "Metody bez zgadywania. Wyniki bez kompromisów.",
+    "Znów poczujesz się wyjątkowo młodo."
   ],
   "achievementsSection": {
     "heading": "Osiągnięcia",
@@ -44,7 +45,7 @@
     },
     {
       "label": "Średni wzrost siły w 3 miesiące",
-      "value": "+25%"
+      "value": "25%"
     }
   ],
   "transformationsSection": {
@@ -56,14 +57,14 @@
     {
       "name": "Anna – powrót do formy po ciąży",
       "description": "Praca nad stabilizacją, siłą całego ciała i powrotem do sylwetki sprzed ciąży. Mniejszy ból pleców, więcej energii na co dzień.",
-      "beforeImageUrl": "assets/gallery/anna-before.jpg",
-      "afterImageUrl": "assets/gallery/anna-after.jpg"
+      "beforeImageUrl": "assets/images/anna-before.webp",
+      "afterImageUrl": "assets/images/anna-after.webp"
     },
     {
       "name": "Marek – redukcja i poprawa kondycji",
       "description": "Połączenie treningu siłowego i interwałów. Mniej kilogramów, lepsza wydolność i satysfakcja z regularnego ruchu.",
-      "beforeImageUrl": "assets/gallery/marek-before.jpg",
-      "afterImageUrl": "assets/gallery/marek-after.jpg"
+      "beforeImageUrl": "assets/images/marek-before.webp",
+      "afterImageUrl": "assets/images/marek-after.webp"
     }
   ],
   "gallerySection": {
@@ -73,15 +74,15 @@
   "galleryItems": [
     {
       "title": "Trening plenerowy",
-      "imageUrl": "assets/gallery/outdoor-training.jpg"
+      "imageUrl": "assets/gallery/outdoor-training.webp"
     },
     {
       "title": "Sesja siłowa na siłowni",
-      "imageUrl": "assets/gallery/gym-session.jpg"
+      "imageUrl": "assets/gallery/gym-session.webp"
     },
     {
       "title": "Mobilność i rozciąganie",
-      "imageUrl": "assets/gallery/stretching.jpg"
+      "imageUrl": "assets/gallery/stretching.webp"
     }
   ],
   "bookSection": {
