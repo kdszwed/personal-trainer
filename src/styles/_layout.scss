@@ -22,7 +22,6 @@ a {
   text-decoration: none;
 }
 
-// Ogólny wygląd sekcji
 .section {
   @include mixins.page-section;
 }

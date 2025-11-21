@@ -1,22 +1,19 @@
 <section id="achievements" class="section section--achievements">
 
-  <!-- TŁO PARALLAX -->
   <div class="achievements__bg-parallax">
     <img
       src="assets/images/achievements2.webp"
-      alt="Tło pucharu przesuwające się przy scrollowaniu"
+      alt="Tło"
     />
   </div>
 
   <div class="achievements__content">
 
-    <!-- Nagłówek sekcji -->
     <div class="section__header">
       <h2>{{ achievementsSection().heading }}</h2>
       <p>{{ achievementsSection().subtitle }}</p>
     </div>
 
-    <!-- Opis -->
     <p class="section__description">
       {{ achievementsSection().description }}
     </p>
@@ -25,11 +22,10 @@
     <div class="achievements__side-image">
       <img
         src="assets/images/achievements1.webp"
-        alt="Osiągnięcia trener personalny"
+        alt="Osiągnięcia"
       />
     </div>
 
-    <!-- GRID z kartami osiągnięć -->
     <div class="achievements__grid">
 
       @for (item of achievements(); let i = $index; track item.label) {

@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ContentService } from '../../content/content';
 
-// Sekcje strony głównej
 import { AboutSectionComponent } from './about-section/about-section';
 import { AchievementsSectionComponent } from './achievements-section/achievements-section';
 import { TransformationsSectionComponent } from './transformations-section/transformations-section';

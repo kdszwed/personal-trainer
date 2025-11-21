@@ -4,7 +4,7 @@
 @use 'styles/mixins';
 @use 'styles/layout';
 
-// Material 3 – konfiguracja kolorów/typografii
+
 html {
   @include mat.theme((
     color: (
@@ -17,15 +17,11 @@ html {
 }
 
 body {
-  // globalne wartości z Material
   color-scheme: dark;
   background-color: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 }
-
-
-
 
 html, body {
   margin: 0;

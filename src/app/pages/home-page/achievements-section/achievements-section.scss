@@ -1,15 +1,13 @@
 @use 'styles/variables' as *;
 @use 'styles/mixins';
 
-/* SEKCJA OSIĄGNIĘCIA  */
 .section--achievements {
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-/* PARALLAX BACKGROUND */
 .achievements__bg-parallax {
   position: absolute;
   top: 30%;
@@ -28,7 +26,6 @@
   }
 }
 
-/* TREŚĆ SEKCJI */
 .achievements__content {
   position: relative;
   z-index: 2;
@@ -37,7 +34,6 @@
   padding: 0 24px;
 }
 
-/* Header sekcji */
 .section__header {
   text-align: center;
 
@@ -63,7 +59,6 @@
   line-height: 1.6;
 }
 
-/* ZDJĘCIE  */
 .achievements__side-image {
   display: flex;
   justify-content: center;
@@ -78,7 +73,6 @@
   }
 }
 
-/* GRID z kartami */
 .achievements__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -86,7 +80,6 @@
   margin-top: 40px;
 }
 
-/* Karta (MatCard) – wyniki */
 .achievements__card {
   padding: clamp(18px, 3vw, 28px);
   background: rgba(255, 255, 255, 0.06);
@@ -109,7 +102,6 @@
   opacity: 0.9;
 }
 
-/* VALUE animowane */
 .achievements__value {
   font-size: clamp(32px, 6vw, 64px);
   font-weight: 700;
@@ -118,7 +110,6 @@
   line-height: 1;
 }
 
-/* LABEL */
 .achievements__label {
   font-size: clamp(14px, 2vw, 18px);
   color: $color-text-muted;
@@ -126,7 +117,6 @@
 }
 
 
-/* RWD */
 @media (max-width: 700px) {
   .achievements__side-image img {
     width: clamp(160px, 46vw, 260px);

@@ -23,28 +23,27 @@ export class AchievementsSectionComponent implements AfterViewInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
-  // dane tekstowe z JSON
+
   achievementsSection = this.contentService.achievementsSection;
   achievements = this.contentService.achievements;
 
-  // sygnał do animowanych liczb
+
   animatedValues = signal<number[]>([]);
 
-  // sufiksy typu "%", "kg", "+", "przemian" itd.
+
   suffixes: string[] = [];
 
-  // kontroluje, czy animacja liczb już się wykonała
+
   private hasAnimated = false;
 
   constructor() {
-    // ustawiamy początkowe wartości liczb = 0
+
     effect(() => {
       const items = this.achievements();
       this.animatedValues.set(items.map(() => 0));
     });
   }
 
-  //   OBSERVER
   ngAfterViewInit(): void {
     if (!this.isBrowser) {
       return;
@@ -68,20 +67,17 @@ export class AchievementsSectionComponent implements AfterViewInit {
     window.addEventListener('scroll', () => this.updateParallax());
   }
 
-  // PARSER – LICZBA
   private parseNumber(value: any): number {
     if (!value) return 0;
     return Number(String(value).replace(/[^0-9.-]/g, ''));
   }
 
-  // PARSER – SUFIKS (%, kg, + ...)
   private extractSuffix(value: any): string {
     if (!value) return '';
-    // usuń liczby, spacje, kropki, minusy – zostaje sufiks
+
     return String(value).replace(/[0-9.\-\s]+/g, '');
   }
 
-  // START ANIMACJI LICZB
   private startNumberAnimation() {
     const data = this.achievements();
 
@@ -91,7 +87,6 @@ export class AchievementsSectionComponent implements AfterViewInit {
     this.animateNumbers(numericTargets);
   }
 
-  // GŁÓWNA ANIMACJA OD 0 -> value
   private animateNumbers(targets: number[]) {
     const duration = 1300;
     const steps = 60;
@@ -101,7 +96,7 @@ export class AchievementsSectionComponent implements AfterViewInit {
       frame++;
 
       const progress = frame / steps;
-      const eased = progress < 1 ? progress * progress : 1; // easeOutQuad
+      const eased = progress < 1 ? progress * progress : 1;
 
       const currentValues = targets.map(t => Math.floor(t * eased));
       this.animatedValues.set(currentValues);
@@ -112,7 +107,6 @@ export class AchievementsSectionComponent implements AfterViewInit {
     }, duration / steps);
   }
 
-  // PARALLAX
   private updateParallax() {
     if (!this.isBrowser) {
       return;

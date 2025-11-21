@@ -1,18 +1,56 @@
-<mat-toolbar class="toolbar" color="primary">
-  <div class="toolbar__content">
-    <img src="assets/logo/logo.svg" alt="Logo" class="toolbar__logo" />
+<div class="app-shell">
+  <mat-toolbar class="toolbar" color="primary">
+    <div class="toolbar__content">
 
-    <nav class="toolbar__nav">
-      @for (item of navItems; track item.fragment) {
-        <button
-          mat-button
-          (click)="scrollTo(item.fragment)"
-        >
-          {{ item.label }}
-        </button>
-      }
-    </nav>
-  </div>
-</mat-toolbar>
+      <img
+        src="assets/logo/logo.svg"
+        alt="Logo"
+        class="toolbar__logo"
+        (click)="scrollTop()"
+      />
 
-<router-outlet></router-outlet>
+      <nav class="toolbar__nav">
+        @for (item of navItems; track item.fragment) {
+          <button mat-button (click)="scrollTo(item.fragment)">
+            {{ item.label }}
+          </button>
+        }
+      </nav>
+
+    </div>
+  </mat-toolbar>
+
+  <main class="app-shell__main">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__overlay">
+
+      <div class="footer__inner">
+
+        <div class="footer__left">
+          <p class="footer__copy">Copyright © 2025</p>
+        </div>
+
+        <div class="footer__center">
+          <p>Trener personalny</p>
+          <p>ul. Nowa 7/7</p>
+          <p>77-777 Lublin</p>
+          <p><a href="tel:777777777">telefon. 777777777</a></p>
+        </div>
+
+        <div class="footer__right">
+          <img
+            src="assets/logo/logo.svg"
+            alt="Logo"
+            class="footer__logo"
+            (click)="scrollTop()"
+          />
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+</div>
