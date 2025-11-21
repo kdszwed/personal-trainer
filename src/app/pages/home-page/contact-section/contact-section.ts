@@ -5,7 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-import { ContentService } from '../../../content/content';
+import { ContentService } from '@service/content.service';
 
 @Component({
   selector: 'app-contact-section',
@@ -25,7 +25,7 @@ export class ContactSectionComponent {
   private readonly fb = inject(FormBuilder);
   private readonly contentService = inject(ContentService);
 
-  contactSection = this.contentService.contactSection;
+  readonly contactSection = this.contentService.contactSection;
 
   contactForm = this.fb.nonNullable.group({
     type: ['umow-trening', [Validators.required]],

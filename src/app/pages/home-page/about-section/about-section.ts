@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { ContentService } from '../../../content/content';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { ContentService } from '@service/content.service';
 
 @Component({
   selector: 'app-about-section',
@@ -10,13 +12,9 @@ import { ContentService } from '../../../content/content';
 export class AboutSectionComponent {
   private readonly contentService = inject(ContentService);
 
-  heroTitle = this.contentService.heroTitle;
-  heroSubtitle = this.contentService.heroSubtitle;
-
-  aboutIntro = this.contentService.aboutIntro;
-  aboutParagraphs = this.contentService.aboutParagraphs;
-
-  slogans = this.contentService.slogans;
+  readonly heroSection = this.contentService.heroSection;
+  readonly aboutSection = this.contentService.aboutSection;
+  readonly slogans = this.contentService.slogans;
 
   scrollTo(fragment: string) {
     const el = document.getElementById(fragment);

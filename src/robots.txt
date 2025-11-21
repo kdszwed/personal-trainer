@@ -1,0 +1,23 @@
+User-agent: *
+
+# Blokada plików Angulara i bundli
+Disallow: /*.js$
+Disallow: /*.mjs$
+Disallow: /*.ts$
+Disallow: /*.css$
+Disallow: /*.map$
+Disallow: /*.html$
+
+# Zezwalamy tylko na stronę główną i podstrony route (generowane przez router)
+Allow: /
+
+# Blokada zasobów JSON z treściami
+Disallow: /assets/*.json$
+Disallow: /content/*.json$
+Disallow: /*content.json$
+
+# Blokada katalogów technicznych
+Disallow: /server/
+Disallow: /ssr/
+Disallow: /browser/
+Disallow: /favicon.ico

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { ContentService } from '../../../content/content';
+import { ContentService } from '@service/content.service';
 
 @Component({
   selector: 'app-book-session-section',
@@ -12,7 +12,7 @@ import { ContentService } from '../../../content/content';
 export class BookSessionSectionComponent {
   private readonly contentService = inject(ContentService);
 
-  bookSection = this.contentService.bookSection;
+  readonly bookSection = this.contentService.bookSessionSection;
 
   scrollToContact() {
     const el = document.getElementById('contact');

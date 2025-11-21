@@ -9,7 +9,7 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
-import { ContentService } from '../../../content/content';
+import { ContentService } from '@service/content.service';
 
 @Component({
   selector: 'app-achievements-section',
@@ -22,24 +22,17 @@ export class AchievementsSectionComponent implements AfterViewInit {
   private readonly contentService = inject(ContentService);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
+  private hasAnimated = false;
 
-
-  achievementsSection = this.contentService.achievementsSection;
-  achievements = this.contentService.achievements;
-
-
+  readonly achievementsSection = this.contentService.achievementsSection;
   animatedValues = signal<number[]>([]);
 
-
   suffixes: string[] = [];
-
-
-  private hasAnimated = false;
 
   constructor() {
 
     effect(() => {
-      const items = this.achievements();
+      const items = this.achievementsSection().achievements;
       this.animatedValues.set(items.map(() => 0));
     });
   }
@@ -60,10 +53,8 @@ export class AchievementsSectionComponent implements AfterViewInit {
           },
           { threshold: 0.3 }
       );
-
       observer.observe(section);
     }
-
     window.addEventListener('scroll', () => this.updateParallax());
   }
 
@@ -79,7 +70,7 @@ export class AchievementsSectionComponent implements AfterViewInit {
   }
 
   private startNumberAnimation() {
-    const data = this.achievements();
+    const data = this.achievementsSection().achievements;
 
     const numericTargets = data.map(a => this.parseNumber(a.value));
     this.suffixes = data.map(a => this.extractSuffix(a.value));

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { ContentService } from '../../../content/content';
+import { ContentService } from '@service/content.service';
 
 @Component({
   selector: 'app-gallery-section',
@@ -12,6 +12,5 @@ import { ContentService } from '../../../content/content';
 export class GallerySectionComponent {
   private readonly contentService = inject(ContentService);
 
-  gallerySection = this.contentService.gallerySection;
-  galleryItems = this.contentService.galleryItems;
+  readonly gallerySection = this.contentService.gallerySection;
 }
