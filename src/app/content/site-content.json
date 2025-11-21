@@ -74,15 +74,15 @@
   "galleryItems": [
     {
       "title": "Trening plenerowy",
-      "imageUrl": "assets/gallery/outdoor-training.jpg"
+      "imageUrl": "assets/gallery/outdoor-training.webp"
     },
     {
       "title": "Sesja siłowa na siłowni",
-      "imageUrl": "assets/gallery/gym-session.jpg"
+      "imageUrl": "assets/gallery/gym-session.webp"
     },
     {
       "title": "Mobilność i rozciąganie",
-      "imageUrl": "assets/gallery/stretching.jpg"
+      "imageUrl": "assets/gallery/stretching.webp"
     }
   ],
   "bookSection": {
