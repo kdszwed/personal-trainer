@@ -102,6 +102,8 @@
 .footer {
   flex-shrink: 0;
   background: url('/assets/images/footer.webp') center/cover no-repeat;
+  background-position-y: 70%;
+  margin-top: 40px;
   color: #ffffff;
 }
 

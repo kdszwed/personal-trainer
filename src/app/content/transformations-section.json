@@ -1,0 +1,19 @@
+{
+  "heading": "Przemiany",
+  "subtitle": "Droga od pierwszego treningu do widocznych efektów.",
+  "description": "Proces przemiany to nie tylko zdjęcia przed i po. To zmiana sposobu myślenia, pewności siebie i nawyków, które zostają na lata. Podopieczni zaczynają od konsultacji, planu dostosowanego do ich możliwości i tempa życia, a następnie realizują krok po kroku strategię opartą na progresji i kontroli. Przemiany prezentowane w tej sekcji pokazują, że odpowiednie prowadzenie pozwala osiągnąć efekty niezależnie od punktu wyjścia, wieku czy doświadczenia.",
+  "transformations": [
+    {
+      "name": "Anna – powrót do formy po ciąży",
+      "description": "Praca nad stabilizacją, siłą całego ciała i powrotem do sylwetki sprzed ciąży. Mniejszy ból pleców, więcej energii na co dzień.",
+      "beforeImageUrl": "assets/images/anna-before.webp",
+      "afterImageUrl": "assets/images/anna-after.webp"
+    },
+    {
+      "name": "Marek – redukcja i poprawa kondycji",
+      "description": "Połączenie treningu siłowego i interwałów. Mniej kilogramów, lepsza wydolność i satysfakcja z regularnego ruchu.",
+      "beforeImageUrl": "assets/images/marek-before.webp",
+      "afterImageUrl": "assets/images/marek-after.webp"
+    }
+  ]
+}

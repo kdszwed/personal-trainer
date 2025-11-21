@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { ContentService } from '../../../content/content';
+import { ContentService } from '@service/content.service';
 
 @Component({
   selector: 'app-transformations-section',
@@ -21,9 +21,7 @@ export class TransformationsSectionComponent implements AfterViewInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
-  transformationsSection = this.contentService.transformationsSection;
-  transformations = this.contentService.transformations;
-
+  readonly transformationsSection = this.contentService.transformationsSection;
 
   visible = signal(false);
 
@@ -52,4 +50,5 @@ export class TransformationsSectionComponent implements AfterViewInit {
 
     observer.observe(section);
   }
+
 }

@@ -1,6 +1,35 @@
-<app-about-section></app-about-section>
-<app-achievements-section></app-achievements-section>
-<app-transformations-section></app-transformations-section>
-<app-gallery-section></app-gallery-section>
-<app-book-session-section></app-book-session-section>
-<app-contact-section></app-contact-section>
+@defer (on viewport) {
+  <app-about-section></app-about-section>
+} @placeholder {
+  <div style="height:1px"></div>
+}
+
+@defer (on viewport) {
+  <app-achievements-section></app-achievements-section>
+} @placeholder {
+  <div style="height:1px"></div>
+}
+
+@defer (on viewport) {
+  <app-transformations-section></app-transformations-section>
+} @placeholder {
+  <div style="height:1px"></div>
+}
+
+@defer (on viewport) {
+  <app-gallery-section></app-gallery-section>
+} @placeholder {
+  <div style="height:1px"></div>
+}
+
+@defer (on viewport) {
+  <app-book-session-section></app-book-session-section>
+} @placeholder {
+  <div style="height:1px"></div>
+}
+
+@defer (on viewport) {
+  <app-contact-section></app-contact-section>
+} @placeholder {
+  <div style="height:1px"></div>
+}

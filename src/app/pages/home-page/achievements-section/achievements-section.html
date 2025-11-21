@@ -28,7 +28,7 @@
 
     <div class="achievements__grid">
 
-      @for (item of achievements(); let i = $index; track item.label) {
+      @for (item of achievementsSection().achievements; let i = $index; track item.label) {
         <mat-card class="achievements__card">
 
           <div class="achievements__value">

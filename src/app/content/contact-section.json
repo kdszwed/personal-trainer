@@ -1,0 +1,45 @@
+{
+  "heading": "Kontakt",
+  "subtitle": "Wypełnij formularz, a odezwę się do Ciebie z propozycją współpracy.",
+  "description": "Jeśli masz pytania dotyczące współpracy, planów treningowych lub dostępnych terminów, możesz skorzystać z formularza kontaktowego lub napisać bezpośrednio. Odpowiadam szybko i rzeczowo, aby sprawnie ustalić szczegóły, omówić cele i zaproponować najlepszą formę współpracy. Niezależnie od tego, czy dopiero zaczynasz, czy chcesz wejść na wyższy poziom — pierwszy kontakt to początek drogi do lepszej formy.",
+  "successMessage": "Dziękuję za wiadomość! Skontaktuję się z Tobą możliwie najszybciej.",
+  "fields": {
+    "type": {
+      "label": "Rodzaj zapytania",
+      "error": "Wybierz rodzaj zapytania.",
+      "options": [
+        {
+          "value": "umow-trening",
+          "label": "Umów trening"
+        },
+        {
+          "value": "pytanie-ogolne",
+          "label": "Pytanie ogólne"
+        },
+        {
+          "value": "inne",
+          "label": "Inne"
+        }
+      ]
+    },
+    "name": {
+      "label": "Imię",
+      "placeholder": "Twoje imię",
+      "error": "Podaj poprawne imię (min. 2 znaki)."
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "twoj.email@example.com",
+      "error": "Podaj poprawny adres e-mail."
+    },
+    "message": {
+      "label": "Wiadomość",
+      "placeholder": "Napisz krótko o swoich celach...",
+      "error": "Wiadomość powinna mieć min. 10 znaków."
+    },
+    "submit": {
+      "label": "Wyślij wiadomość",
+      "sendingLabel": "Wysyłanie..."
+    }
+  }
+}

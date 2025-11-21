@@ -1,0 +1,18 @@
+{
+  "heading": "Galeria",
+  "subtitle": "Fragmenty treningów, współpracy z podopiecznymi i codziennej pracy trenera.",
+  "galleryItems": [
+    {
+      "title": "Trening plenerowy",
+      "imageUrl": "assets/gallery/outdoor-training.webp"
+    },
+    {
+      "title": "Sesja siłowa na siłowni",
+      "imageUrl": "assets/gallery/gym-session.webp"
+    },
+    {
+      "title": "Mobilność i rozciąganie",
+      "imageUrl": "assets/gallery/stretching.webp"
+    }
+  ]
+}

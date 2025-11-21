@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -25,17 +25,23 @@ export class App {
     { label: 'Kontakt', fragment: 'contact' }
   ];
 
-  scrollTo(fragment: string) {
-    const headerOffset = 100;
-    const element = document.getElementById(fragment);
+  constructor(private router: Router) {}
 
-    if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - headerOffset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+  scrollTo(fragment: string) {
+    void this.router.navigate([], {
+      fragment,
+      replaceUrl: false,
+      queryParamsHandling: 'preserve'
+    });
   }
 
+
   scrollTop() {
+    if (typeof window === 'undefined') return;
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    void this.router.navigate([], {
+      replaceUrl: true
+    });
   }
 }
