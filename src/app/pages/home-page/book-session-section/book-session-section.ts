@@ -16,8 +16,6 @@ export class BookSessionSectionComponent {
 
   scrollToContact() {
     const el = document.getElementById('contact');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
